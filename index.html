@@ -1,12 +1,36 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Base44 APP</title>
-  </head>
-  
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaun Thivierge | Cyber & Physical Security Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href__="https://fonts.googleapis.com">
+    <link rel="preconnect" href__="https://fonts.gstatic.com" crossorigin>
+    <link href__="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .experience-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
+        }
+        .experience-item.active .experience-content {
+            max-height: 1000px; /* Large enough to not clip content */
+        }
+    </style>
+</head>
+
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4JF3HFC2"></script>
 <script>
@@ -16,9 +40,665 @@
 
   gtag('config', 'G-KB4JF3HFC2');
 </script>
-  
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<body class="bg-slate-900">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-slate-700/20 rounded-full blur-2xl"></div>
+      </div>
+      <div class="relative z-10 container mx-auto px-6 py-20 flex items-center min-h-screen">
+        <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+          <div class="max-w-xl text-center lg:text-left scroll-animate">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-500/20 mb-8">
+              <i data-lucide="shield" class="w-4 h-4 text-blue-400"></i>
+              <span class="text-blue-300 font-medium text-sm">Security Professional</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">Shaun K. Thivierge</h1>
+            <h2 class="text-2xl md:text-3xl font-light text-slate-300 mb-8 leading-relaxed">Cyber &amp; Physical Security Leader</h2>
+            <div class="flex flex-wrap gap-3 mb-12 justify-center lg:justify-start">
+              <div class="px-4 py-2 bg-slate-800/50 border border-slate-600 text-slate-200 text-sm font-medium hover:bg-slate-700/50 transition-colors rounded-full flex items-center gap-2"><i data-lucide="award" class="w-3 h-3 text-amber-400"></i>CPP</div>
+              <div class="px-4 py-2 bg-slate-800/50 border border-slate-600 text-slate-200 text-sm font-medium hover:bg-slate-700/50 transition-colors rounded-full flex items-center gap-2"><i data-lucide="award" class="w-3 h-3 text-amber-400"></i>PSP</div>
+              <div class="px-4 py-2 bg-slate-800/50 border border-slate-600 text-slate-200 text-sm font-medium hover:bg-slate-700/50 transition-colors rounded-full flex items-center gap-2"><i data-lucide="award" class="w-3 h-3 text-amber-400"></i>PCI</div>
+              <div class="px-4 py-2 bg-slate-800/50 border border-slate-600 text-slate-200 text-sm font-medium hover:bg-slate-700/50 transition-colors rounded-full flex items-center gap-2"><i data-lucide="award" class="w-3 h-3 text-amber-400"></i>CompTIA Security+</div>
+              <div class="px-4 py-2 bg-slate-800/50 border border-slate-600 text-slate-200 text-sm font-medium hover:bg-slate-700/50 transition-colors rounded-full flex items-center gap-2"><i data-lucide="award" class="w-3 h-3 text-amber-400"></i>FAA Part 107</div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button id="hero-contact-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl transition-all duration-300">Get In Touch</button>
+              <button onclick="window.open('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/cd0690c75_ShaunKThiviergeResume.pdf', '_blank')" class="border border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-3 rounded-lg font-semibold text-base flex items-center justify-center gap-2">
+                <i data-lucide="download" class="w-4 h-4"></i>Download Resume
+              </button>
+            </div>
+          </div>
+          <div class="relative flex justify-center lg:justify-end scroll-animate" style="transition-delay: 200ms;">
+            <div class="relative w-80 h-80 md:w-96 md:h-96">
+                <div class="absolute inset-0 bg-blue-600/20 rounded-full blur-2xl"></div>
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/4a22a0f08_profile.jpg" alt="Shaun Thivierge Headshot" class="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-slate-700">
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div class="w-6 h-10 border-2 border-slate-500 rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 scroll-animate">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Areas of Expertise</h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Comprehensive security leadership across cyber and physical domains, with proven expertise in enterprise-scale implementations.</p>
+        </div>
+        <div class="max-w-4xl mx-auto mb-16 bg-slate-50 rounded-2xl shadow-xl border border-slate-200 scroll-animate">
+            <div class="p-8">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Career Summary</h3>
+                <p class="text-slate-600 leading-relaxed">A decade-plus progression from front-line operations to senior leadership, managing global cyber and physical security programs.</p>
+                <div id="bio-content" class="overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
+                    <div class="pt-4">
+                        <p class="text-slate-700 leading-relaxed mb-6">Over a career spanning more than a decade, Shaun has progressed from front-line security operations to senior leadership roles managing global cyber and physical security programs. Beginning as a Flex Officer in 2010, he advanced through GSOC operations, site supervision, and account management before stepping into corporate security advisory roles. His path includes leadership in emergency management during California wildfires, global security systems management, and the convergence of cyber–physical risk programs. Today, as Vulnerability Detection Manager at Oportun, Shaun drives remediation, compliance, and innovation across infrastructure, applications, and vendor ecosystems—while fostering cross-functional collaboration with Legal, HR, Safety, and Facilities.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Strategic Planning & Execution</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Process Improvement & Automation</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Physical & Cyber–Security Management</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Risk Assessment & Mitigation</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Project Management & Control</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Vendor Management</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Team Leadership & Support</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Staff Training & Development</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Emergency Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 px-8 py-4">
+                 <button id="bio-toggle" class="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
+                    <span>Read Full Bio</span>
+                    <div id="bio-chevron" class="ml-2 transition-transform duration-300">
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div class="scroll-animate group">
+            <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
+              <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="search" class="w-7 h-7 text-white"></i></div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Vulnerability Management</h3>
+              <p class="text-slate-600 leading-relaxed">Comprehensive security assessments and vulnerability identification across enterprise environments.</p>
+            </div>
+          </div>
+          <div class="scroll-animate group" style="transition-delay: 100ms;">
+            <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
+              <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="alert-triangle" class="w-7 h-7 text-white"></i></div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Threat Assessment</h3>
+              <p class="text-slate-600 leading-relaxed">Advanced threat modeling and risk analysis for complex organizational security landscapes.</p>
+            </div>
+          </div>
+          <div class="scroll-animate group" style="transition-delay: 200ms;">
+            <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
+              <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="shield" class="w-7 h-7 text-white"></i></div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Risk Mitigation</h3>
+              <p class="text-slate-600 leading-relaxed">Strategic implementation of security controls and risk reduction frameworks.</p>
+            </div>
+          </div>
+          <div class="scroll-animate group" style="transition-delay: 300ms;">
+            <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
+              <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="zap" class="w-7 h-7 text-white"></i></div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Security Automation</h3>
+              <p class="text-slate-600 leading-relaxed">Development and deployment of automated security processes and incident response systems.</p>
+            </div>
+          </div>
+          <div class="scroll-animate group" style="transition-delay: 400ms;">
+            <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
+              <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="file-check" class="w-7 h-7 text-white"></i></div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Regulatory Compliance</h3>
+              <p class="text-slate-600 leading-relaxed">Expert guidance on PCI DSS, SOX, and other critical regulatory compliance frameworks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-24 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 scroll-animate">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Professional Experience</h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">A proven track record of security leadership across diverse industries, from financial services to critical infrastructure.</p>
+        </div>
+        <div class="max-w-4xl mx-auto space-y-4">
+          <!-- Experience Item 1 -->
+          <div class="experience-item bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-200 overflow-hidden scroll-animate active">
+            <button class="experience-toggle w-full text-left p-6">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div class="flex-1 mb-4 sm:mb-0">
+                  <div class="flex items-center gap-4 mb-3">
+                    <div class="logo-container flex-shrink-0 transition-transform duration-300 scale-75">
+                      <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/5524926f0_oportun.png" alt="Oportun logo" class="logo object-contain transition-all duration-300 h-10">
+                    </div>
+                    <span class="company-name font-bold text-slate-800 transition-all duration-300 text-lg">Oportun</span>
+                  </div>
+                  <h3 class="job-title font-bold text-slate-900 mb-2 transition-all duration-300 text-xl">Vulnerability Detection Manager | Cyber Security Manager</h3>
+                  <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="calendar" class="w-4 h-4"></i><span class="font-medium">Dec 2023 - Present</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="tech-tags hidden sm:flex flex-wrap gap-2 justify-end max-w-xs opacity-0 transition-opacity duration-300">
+                     <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">PCI DSS</span>
+                     <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Vulnerability Management</span>
+                  </div>
+                  <div class="chevron p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors transform rotate-180">
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-600"></i>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="experience-content border-t border-slate-200">
+              <div class="px-6 pb-6 pt-4">
+                <div class="space-y-3 my-4">
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Led team to remediate ~2k findings for PCI DSS 3.2.1 Level 1 audit compliance.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Maintained 104%+ remediation rates across infrastructure and code vulnerabilities.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Restructured the Vulnerability Management program by revising 6 policies and procedures.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Managed SAST, DAST, BugBounty, and other scanning platforms and vendor relationships.</p></div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">PCI DSS</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Vulnerability Management</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">SAST/DAST</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Policy Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Experience Item 2 -->
+          <div class="experience-item bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-200 overflow-hidden scroll-animate">
+            <button class="experience-toggle w-full text-left p-6">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div class="flex-1 mb-4 sm:mb-0">
+                  <div class="flex items-center gap-4 mb-3">
+                    <div class="logo-container flex-shrink-0 transition-transform duration-300">
+                      <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/5524926f0_oportun.png" alt="Oportun logo" class="logo object-contain transition-all duration-300 h-14">
+                    </div>
+                    <span class="company-name font-bold text-slate-800 transition-all duration-300 text-xl">Oportun</span>
+                  </div>
+                  <h3 class="job-title font-bold text-slate-900 mb-2 transition-all duration-300 text-2xl">Sr. Cyber Security Engineer | Security Services Reliability Engineer</h3>
+                  <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="calendar" class="w-4 h-4"></i><span class="font-medium">Aug 2022 - Dec 2023</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="tech-tags hidden sm:flex flex-wrap gap-2 justify-end max-w-xs">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SOAR</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SIEM</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Threat Intelligence</span>
+                  </div>
+                  <div class="chevron p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-600"></i>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="experience-content border-t border-slate-200">
+              <div class="px-6 pb-6 pt-4">
+                <div class="space-y-3 my-4">
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Developed department-wide RFP and POC process for vendor evaluation.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Built integrations for 14 IoC and threat feeds for automated vulnerability triage.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Managed onboarding of cloud SIEM platform for CSOC incident response.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Managed deployment of SOAR, including 25+ integrations and 6 runbook developments.</p></div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">SOAR</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">SIEM</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Threat Intelligence</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Vendor Onboarding</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-item bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-200 overflow-hidden scroll-animate">
+            <button class="experience-toggle w-full text-left p-6">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div class="flex-1 mb-4 sm:mb-0">
+                  <div class="flex items-center gap-4 mb-3">
+                    <div class="logo-container flex-shrink-0 transition-transform duration-300">
+                      <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/5524926f0_oportun.png" alt="Oportun logo" class="logo object-contain transition-all duration-300 h-14">
+                    </div>
+                    <span class="company-name font-bold text-slate-800 transition-all duration-300 text-xl">Oportun</span>
+                  </div>
+                  <h3 class="job-title font-bold text-slate-900 mb-2 transition-all duration-300 text-2xl">Global Security Systems Manager | Security Technology Manager</h3>
+                  <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="calendar" class="w-4 h-4"></i><span class="font-medium">Apr 2019 - Aug 2022</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="tech-tags hidden sm:flex flex-wrap gap-2 justify-end max-w-xs">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Global Security</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">System Maintenance</span>
+                  </div>
+                  <div class="chevron p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-600"></i>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="experience-content border-t border-slate-200">
+              <div class="px-6 pb-6 pt-4">
+                <div class="space-y-3 my-4">
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Oversaw system maintenance for 350+ locations internationally.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Conducted cyber security tool stack assessments to analyze remediation capacity.</p></div>
+                  <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Supervised global access control federation integration for 10 locations and 3k employees.</p></div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Global Security</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">System Maintenance</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Access Control</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Incident Response</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-item bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-200 overflow-hidden scroll-animate">
+            <button class="experience-toggle w-full text-left p-6">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div class="flex-1 mb-4 sm:mb-0">
+                  <div class="flex items-center gap-4 mb-3">
+                    <div class="logo-container flex-shrink-0 transition-transform duration-300">
+                      <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/769ef3c6b_pge.png" alt="Pacific Gas & Electric logo" class="logo object-contain transition-all duration-300 h-14">
+                    </div>
+                    <span class="company-name font-bold text-slate-800 transition-all duration-300 text-xl">Pacific Gas & Electric</span>
+                  </div>
+                  <h3 class="job-title font-bold text-slate-900 mb-2 transition-all duration-300 text-2xl">Senior Physical Security Specialist</h3>
+                  <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="calendar" class="w-4 h-4"></i><span class="font-medium">Oct 2017 - Mar 2019</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="tech-tags hidden sm:flex flex-wrap gap-2 justify-end max-w-xs">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">NERC-CIP</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Emergency Operations</span>
+                  </div>
+                  <div class="chevron p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-600"></i>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="experience-content border-t border-slate-200">
+              <div class="px-6 pb-6 pt-4">
+                <div class="space-y-3 my-4">
+                    <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Maintained NERC-CIP adherence via risk assessments and penetration testing.</p></div>
+                    <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Directly administered PG&E emergency basecamp operations in 2017 and 2018 wildfires.</p></div>
+                    <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Initiated onboarding and training program for 670+ contracted security officers.</p></div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">NERC-CIP</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Vendor Compliance</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Emergency Operations</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Physical Security</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-item bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-200 overflow-hidden scroll-animate">
+            <button class="experience-toggle w-full text-left p-6">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div class="flex-1 mb-4 sm:mb-0">
+                  <div class="flex items-center gap-4 mb-3">
+                    <div class="logo-container flex-shrink-0 transition-transform duration-300">
+                      <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/361edb26e_bankofthewest.png" alt="Bank of the West logo" class="logo object-contain transition-all duration-300 h-14">
+                    </div>
+                    <span class="company-name font-bold text-slate-800 transition-all duration-300 text-xl">Bank of the West</span>
+                  </div>
+                  <h3 class="job-title font-bold text-slate-900 mb-2 transition-all duration-300 text-2xl">Assistant Vice President, Physical Security Advisor</h3>
+                  <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="calendar" class="w-4 h-4"></i><span class="font-medium">Previous Experience</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="tech-tags hidden sm:flex flex-wrap gap-2 justify-end max-w-xs">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Financial Security</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Risk Advisory</span>
+                  </div>
+                  <div class="chevron p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-600"></i>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="experience-content border-t border-slate-200">
+              <div class="px-6 pb-6 pt-4">
+                <div class="space-y-3 my-4">
+                    <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Advised on physical security protocols and risk mitigation for financial assets.</p></div>
+                    <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Contributed to the development of corporate security policies and procedures.</p></div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Financial Security</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Risk Advisory</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Policy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-item bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-slate-200 overflow-hidden scroll-animate">
+            <button class="experience-toggle w-full text-left p-6">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div class="flex-1 mb-4 sm:mb-0">
+                  <div class="flex items-center gap-4 mb-3">
+                    <div class="logo-container flex-shrink-0 transition-transform duration-300">
+                      <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/8438be7ce_allieduniversal.png" alt="Allied Universal logo" class="logo object-contain transition-all duration-300 h-14">
+                    </div>
+                    <span class="company-name font-bold text-slate-800 transition-all duration-300 text-xl">Allied Universal</span>
+                  </div>
+                  <h3 class="job-title font-bold text-slate-900 mb-2 transition-all duration-300 text-2xl">Account Manager, Supervisor & Operator</h3>
+                  <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="calendar" class="w-4 h-4"></i><span class="font-medium">Previous Experience</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="tech-tags hidden sm:flex flex-wrap gap-2 justify-end max-w-xs">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Client Management</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">GSOC Operations</span>
+                  </div>
+                  <div class="chevron p-2 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-600"></i>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="experience-content border-t border-slate-200">
+              <div class="px-6 pb-6 pt-4">
+                <div class="space-y-3 my-4">
+                    <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Progressed through multiple roles including Flex Officer and GSOC Operator.</p></div>
+                    <div class="flex items-start gap-3"><i data-lucide="award" class="w-4 h-4 text-amber-500 mt-1 flex-shrink-0"></i><p class="text-slate-700 leading-relaxed">Managed security services for key client accounts.</p></div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Client Management</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">GSOC Operations</span>
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Site Supervision</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 scroll-animate">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Certifications & Credentials</h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Industry-recognized certifications demonstrating expertise across cybersecurity, physical security, and specialized domains.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <a href__="https://www.credly.com/badges/d6e7e513-507e-4fb4-ac17-5960d8300980/linked_in_profile" target="_blank" class="scroll-animate group cursor-pointer block">
+            <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
+              <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/d63f71b44_cpp.png" alt="CPP logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
+              <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">Certified Protection Professional (CPP)</h3>
+              <p class="text-blue-600 font-semibold text-sm mt-1">ASIS International</p>
+            </div>
+          </a>
+          <a href__="https://www.credly.com/badges/61e332cd-e32b-4147-a8c6-0027837245e1/linked_in" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 100ms;">
+            <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
+              <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/ade4afc7d_psp.png" alt="PSP logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
+              <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">Physical Security Professional (PSP)</h3>
+              <p class="text-blue-600 font-semibold text-sm mt-1">ASIS International</p>
+            </div>
+          </a>
+          <a href__="https://www.credly.com/badges/ed4b3029-cd9b-4328-80b1-66d7230dc69b/linked_in_profile" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 200ms;">
+            <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
+              <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/ed34c6465_pci.png" alt="PCI logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
+              <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">Professional Certified Investigator (PCI)</h3>
+              <p class="text-blue-600 font-semibold text-sm mt-1">ASIS International</p>
+            </div>
+          </a>
+          <a href__="https://www.credly.com/badges/ba619732-33f8-45df-a0ed-84d5d3c04607/linked_in_profile" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 300ms;">
+            <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
+              <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/7c19526f6_securityplus.png" alt="Security+ logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
+              <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">CompTIA Security+</h3>
+              <p class="text-blue-600 font-semibold text-sm mt-1">CompTIA</p>
+            </div>
+          </a>
+          <a href__="https://business.clicksafety.com/impe/ucp/certificate/certificate.asp?courseid=MOOD39&userid=sthivierge" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 400ms;">
+            <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
+              <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/f867f74f5_osha30.png" alt="OSHA 30 logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
+              <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">OSHA 30-Hour Construction</h3>
+              <p class="text-blue-600 font-semibold text-sm mt-1">ClickSafety</p>
+            </div>
+          </a>
+          <a href__="https://amsrvs.registry.faa.gov/airmeninquiry/Main.aspx" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 500ms;">
+            <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
+              <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/94ee40ea6_faa.png" alt="FAA logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
+              <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">FAA Part 107 Remote Pilot</h3>
+              <p class="text-blue-600 font-semibold text-sm mt-1">Federal Aviation Administration</p>
+            </div>
+          </a>
+          <a href__="https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=3207238" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 600ms;">
+            <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
+              <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/d2925db3a_fcc.png" alt="FCC logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
+              <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">Amateur Radio Operator (KG6TNB)</h3>
+              <p class="text-blue-600 font-semibold text-sm mt-1">Federal Communications Commission</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-24 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 scroll-animate">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Education & Development</h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">A foundation in global studies complemented by specialized training in cybersecurity and customer experience.</p>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div class="scroll-animate bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col items-center text-center">
+            <div class="h-20 w-full flex items-center justify-center mb-6"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/b49504865_asu.png" alt="ASU logo" class="max-h-full max-w-full object-contain"></div>
+            <h4 class="text-lg font-semibold text-slate-800 flex-grow">Bachelor of Science, Political Science & Global Studies</h4>
+            <p class="text-blue-600 font-medium mt-2">Arizona State University</p>
+          </div>
+          <div class="scroll-animate bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col items-center text-center" style="transition-delay: 100ms;">
+            <div class="h-20 w-full flex items-center justify-center mb-6"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/986dbcd18_ucberkeley.png" alt="UC Berkeley logo" class="max-h-full max-w-full object-contain"></div>
+            <h4 class="text-lg font-semibold text-slate-800 flex-grow">Cybersecurity Bootcamp</h4>
+            <p class="text-blue-600 font-medium mt-2">University of California, Berkeley</p>
+          </div>
+          <div class="scroll-animate bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col items-center text-center" style="transition-delay: 200ms;">
+            <div class="h-20 w-full flex items-center justify-center mb-6"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/27eca2483_uci.png" alt="UC Irvine logo" class="max-h-full max-w-full object-contain"></div>
+            <h4 class="text-lg font-semibold text-slate-800 flex-grow">Customer Experience Certificate</h4>
+            <p class="text-blue-600 font-medium mt-2">University of California, Irvine</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 scroll-animate">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Featured Articles & Publications</h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Thought leadership and insights on the evolving landscape of security management.</p>
+        </div>
+        <div class="max-w-4xl mx-auto space-y-8">
+          <div class="scroll-animate group">
+            <div class="bg-slate-50 rounded-2xl p-8 hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                <div class="flex-1">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center"><i data-lucide="file-text" class="w-6 h-6 text-white"></i></div>
+                    <div>
+                      <h3 class="text-xl font-bold text-slate-900 leading-tight">The Future of Integrated Security Operations</h3>
+                      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2">
+                        <p class="text-blue-600 font-semibold">Security Management Magazine</p>
+                        <div class="flex items-center gap-1 text-slate-500"><i data-lucide="calendar" class="w-4 h-4"></i><span class="text-sm">May 2022</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-slate-700 leading-relaxed pl-16 md:pl-0">Exploring the convergence of cyber and physical security in modern enterprise environments.</p>
+                </div>
+                <a href__="#" target="_blank" class="flex-shrink-0 mt-4 md:mt-0 flex items-center gap-2 border border-slate-300 text-slate-700 px-4 py-2 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-colors"><span>Read Article</span><i data-lucide="external-link" class="w-4 h-4"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-animate group" style="transition-delay: 200ms;">
+            <div class="bg-slate-50 rounded-2xl p-8 hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
+              <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                <div class="flex-1">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center"><i data-lucide="file-text" class="w-6 h-6 text-white"></i></div>
+                    <div>
+                      <h3 class="text-xl font-bold text-slate-900 leading-tight">Physical and Digital Convergence in Security</h3>
+                      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2">
+                        <p class="text-blue-600 font-semibold">Swiftlane Blog</p>
+                        <div class="flex items-center gap-1 text-slate-500"><i data-lucide="calendar" class="w-4 h-4"></i><span class="text-sm">March 2022</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-slate-700 leading-relaxed pl-16 md:pl-0">How organizations can achieve seamless integration between physical access control and cybersecurity.</p>
+                </div>
+                <a href__="#" target="_blank" class="flex-shrink-0 mt-4 md:mt-0 flex items-center gap-2 border border-slate-300 text-slate-700 px-4 py-2 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-colors"><span>Read Article</span><i data-lucide="external-link" class="w-4 h-4"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 scroll-animate">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's Connect</h2>
+          <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">Ready to discuss security challenges, collaboration opportunities, or potential career moves? I'd love to hear from you.</p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="scroll-animate">
+              <div class="bg-slate-800 rounded-2xl p-8 h-full flex flex-col hover:bg-slate-700 transition-colors duration-300 border border-slate-700">
+                <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="mail" class="w-7 h-7 text-white"></i></div>
+                <h3 class="text-2xl font-bold text-white mb-4">Email</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed flex-grow">Reach out directly for professional inquiries and opportunities.</p>
+                <a href__="mailto:sthivierge@gmail.com" class="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-base font-semibold"><i data-lucide="external-link" class="w-4 h-4 mr-2"></i>Send Email</a>
+              </div>
+            </div>
+            <div class="scroll-animate" style="transition-delay: 100ms;">
+              <div class="bg-slate-800 rounded-2xl p-8 h-full flex flex-col hover:bg-slate-700 transition-colors duration-300 border border-slate-700">
+                <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="linkedin" class="w-7 h-7 text-white"></i></div>
+                <h3 class="text-2xl font-bold text-white mb-4">LinkedIn</h3>
+                <p class="text-slate-300 mb-6 leading-relaxed flex-grow">Connect with me on LinkedIn to stay updated on professional developments.</p>
+                <a href__="https://www.linkedin.com/in/sthivierge" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-base font-semibold"><i data-lucide="external-link" class="w-4 h-4 mr-2"></i>View Profile</a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center scroll-animate" style="transition-delay: 200ms;">
+            <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700">
+              <h3 class="text-2xl font-bold text-white mb-4">Resume Download</h3>
+              <p class="text-slate-300 mb-6 leading-relaxed">Download a comprehensive overview of my experience and qualifications.</p>
+              <button onclick="window.open('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/cd0690c75_ShaunKThiviergeResume.pdf', '_blank')" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-base rounded-lg flex items-center justify-center gap-2 mx-auto font-semibold"><i data-lucide="download" class="w-5 h-5 mr-2"></i>Download Resume (PDF)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Bio accordion
+        const bioToggle = document.getElementById('bio-toggle');
+        const bioContent = document.getElementById('bio-content');
+        const bioChevron = document.getElementById('bio-chevron');
+        bioToggle.addEventListener('click', () => {
+            const isHidden = bioContent.style.maxHeight === '0px' || bioContent.style.maxHeight === '';
+            if (isHidden) {
+                bioContent.style.maxHeight = bioContent.scrollHeight + 'px';
+                bioToggle.querySelector('span').textContent = 'Show Less';
+                bioChevron.classList.add('rotate-180');
+            } else {
+                bioContent.style.maxHeight = '0px';
+                bioToggle.querySelector('span').textContent = 'Read Full Bio';
+                bioChevron.classList.remove('rotate-180');
+            }
+        });
+
+        // Experience accordion
+        const experienceItems = document.querySelectorAll('.experience-item');
+        experienceItems.forEach((item, index) => {
+            const button = item.querySelector('.experience-toggle');
+            const content = item.querySelector('.experience-content');
+
+            // Set initial state for the first item
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = '0px';
+            }
+
+            button.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                experienceItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.experience-content').style.maxHeight = '0px';
+                    otherItem.querySelector('.logo-container').classList.remove('scale-75');
+                    otherItem.querySelector('.logo').classList.remove('h-10');
+                    otherItem.querySelector('.logo').classList.add('h-14');
+                    otherItem.querySelector('.company-name').classList.remove('text-lg');
+                    otherItem.querySelector('.company-name').classList.add('text-xl');
+                    otherItem.querySelector('.job-title').classList.remove('text-xl');
+                    otherItem.querySelector('.job-title').classList.add('text-2xl');
+                    otherItem.querySelector('.tech-tags').classList.remove('opacity-0');
+                    otherItem.querySelector('.chevron').classList.remove('rotate-180');
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    // Apply active styles
+                    item.querySelector('.logo-container').classList.add('scale-75');
+                    item.querySelector('.logo').classList.remove('h-14');
+                    item.querySelector('.logo').classList.add('h-10');
+                    item.querySelector('.company-name').classList.remove('text-xl');
+                    item.querySelector('.company-name').classList.add('text-lg');
+                    item.querySelector('.job-title').classList.remove('text-2xl');
+                    item.querySelector('.job-title').classList.add('text-xl');
+                    item.querySelector('.tech-tags').classList.add('opacity-0');
+                    item.querySelector('.chevron').classList.add('rotate-180');
+                }
+            });
+        });
+
+        // Smooth scroll for hero button
+        document.getElementById('hero-contact-btn').addEventListener('click', () => {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+
+    </script>
+</body>
 </html>
