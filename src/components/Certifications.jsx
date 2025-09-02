@@ -9,25 +9,25 @@ export default function Certifications() {
       name: 'Certified Protection Professional (CPP)',
       issuer: 'ASIS International',
       logo: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/d63f71b44_cpp.png',
-      link: 'https://www.credly.com/badges/d6e7e513-507e-4fb4-ac17-5960d8300980/linked_in_profile'
+      link: 'https://www.credly.com/badges/d6e7e513-507e-4fb4-ac17-5960d8300980'
     },
     {
       name: 'Physical Security Professional (PSP)',
       issuer: 'ASIS International', 
       logo: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/ade4afc7d_psp.png',
-      link: 'https://www.credly.com/badges/61e332cd-e32b-4147-a8c6-0027837245e1/linked_in'
+      link: 'https://www.credly.com/badges/61e332cd-e32b-4147-a8c6-0027837245e1'
     },
     {
       name: 'Professional Certified Investigator (PCI)',
       issuer: 'ASIS International',
       logo: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/ed34c6465_pci.png',
-      link: 'https://www.credly.com/badges/ed4b3029-cd9b-4328-80b1-66d7230dc69b/linked_in_profile'
+      link: 'https://www.credly.com/badges/ed4b3029-cd9b-4328-80b1-66d7230dc69b'
     },
     {
       name: 'CompTIA Security+',
       issuer: 'CompTIA',
       logo: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/7c19526f6_securityplus.png',
-      link: 'https://www.credly.com/badges/ba619732-33f8-45df-a0ed-84d5d3c04607/linked_in_profile'
+      link: 'https://www.credly.com/badges/ba619732-33f8-45df-a0ed-84d5d3c04607'
     },
     {
       name: 'OSHA 30-Hour Construction',
