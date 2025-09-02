@@ -16,31 +16,11 @@ export default function Expertise() {
   ];
   
   const expertiseAreas = [
-    {
-      icon: Search,
-      title: 'Vulnerability Management',
-      description: 'Comprehensive security assessments and vulnerability identification across enterprise environments.'
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Threat Assessment',
-      description: 'Advanced threat modeling and risk analysis for complex organizational security landscapes.'
-    },
-    {
-      icon: Shield,
-      title: 'Risk Mitigation',
-      description: 'Strategic implementation of security controls and risk reduction frameworks.'
-    },
-    {
-      icon: Zap,
-      title: 'Security Automation',
-      description: 'Development and deployment of automated security processes and incident response systems.'
-    },
-    {
-      icon: FileCheck,
-      title: 'Regulatory Compliance',
-      description: 'Expert guidance on PCI DSS, SOX, and other critical regulatory compliance frameworks.'
-    }
+    { icon: Search, title: 'Vulnerability Management', description: 'Comprehensive security assessments and vulnerability identification across enterprise environments.' },
+    { icon: AlertTriangle, title: 'Threat Assessment', description: 'Advanced threat modeling and risk analysis for complex organizational security landscapes.' },
+    { icon: Shield, title: 'Risk Mitigation', description: 'Strategic implementation of security controls and risk reduction frameworks.' },
+    { icon: Zap, title: 'Security Automation', description: 'Development and deployment of automated security processes and incident response systems.' },
+    { icon: FileCheck, title: 'Regulatory Compliance', description: 'Expert guidance on PCI DSS, SOX, and other critical regulatory compliance frameworks.' }
   ];
 
   return (
@@ -77,28 +57,30 @@ export default function Expertise() {
                 <AnimatePresence initial={false}>
                     {isBioOpen && (
                         <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                            initial="collapsed"
+                            animate="open"
+                            exit="collapsed"
+                            variants={{
+                                open: { opacity: 1, height: 'auto', marginTop: '1rem' },
+                                collapsed: { opacity: 0, height: 0, marginTop: 0 }
+                            }}
+                            transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
                             className="overflow-hidden"
                         >
-                            <div className="pt-4">
-                                <p className="text-slate-700 leading-relaxed mb-6">{bio}</p>
-                                <div className="flex flex-wrap gap-2">
-                                    {bioTags.map(tag => (
-                                        <Badge key={tag} variant="secondary" className="bg-blue-100 text-blue-800">{tag}</Badge>
-                                    ))}
-                                </div>
+                            <p className="text-slate-700 leading-relaxed mb-6">{bio}</p>
+                            <div className="flex flex-wrap gap-2">
+                                {bioTags.map(tag => (
+                                    <Badge key={tag} variant="secondary" className="bg-blue-100 text-blue-800">{tag}</Badge>
+                                ))}
                             </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
             </div>
             <div className="border-t border-slate-200 px-8 py-4">
-                 <Button variant="ghost" onClick={() => setIsBioOpen(!isBioOpen)} className="text-blue-600 hover:text-blue-700 font-semibold">
-                    <span>{isBioOpen ? 'Show Less' : 'Read Full Bio'}</span>
-                    <motion.div animate={{ rotate: isBioOpen ? 180 : 0 }} transition={{ duration: 0.3 }} className="ml-2">
+                <Button variant="link" onClick={() => setIsBioOpen(!isBioOpen)} className="text-blue-600 hover:text-blue-700 font-semibold p-0">
+                    {isBioOpen ? 'Show Less' : 'Read Full Bio'}
+                    <motion.div animate={{ rotate: isBioOpen ? 180 : 0 }} className="ml-2">
                         <ChevronDown className="w-5 h-5" />
                     </motion.div>
                 </Button>
@@ -111,7 +93,7 @@ export default function Expertise() {
               key={area.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
               viewport={{ once: true }}
               className="group"
             >
@@ -119,12 +101,8 @@ export default function Expertise() {
                 <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors">
                   <area.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">
-                  {area.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {area.description}
-                </p>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">{area.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{area.description}</p>
               </div>
             </motion.div>
           ))}

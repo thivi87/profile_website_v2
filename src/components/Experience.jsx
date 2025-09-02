@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Building2, Calendar, Award, ChevronDown } from 'lucide-react';
@@ -52,7 +51,6 @@ const experiences = [
       title: 'Senior Physical Security Specialist',
       period: 'Oct 2017 - Mar 2019',
       achievements: [
-        'Enforced vendor compliance to PG&E safety standards and enhanced operational effectiveness.',
         'Maintained NERC-CIP adherence via risk assessments and penetration testing.',
         'Directly administered PG&E emergency basecamp operations in 2017 and 2018 wildfires.',
         'Initiated onboarding and training program for 670+ contracted security officers.'
@@ -82,7 +80,7 @@ const experiences = [
   ];
 
 export default function Experience() {
-  const [openIndex, setOpenIndex] = useState(0); // Open the first item by default
+  const [openIndex, setOpenIndex] = useState(0); 
 
   return (
     <section className="py-24 bg-slate-50">
@@ -98,8 +96,7 @@ export default function Experience() {
             Professional Experience
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            A proven track record of security leadership across diverse industries, 
-            from financial services to critical infrastructure.
+            A proven track record of security leadership across diverse industries, from financial services to critical infrastructure.
           </p>
         </motion.div>
 
@@ -121,39 +118,19 @@ export default function Experience() {
                 >
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
                     <div className="flex-1 mb-4 sm:mb-0">
-                      <div className="flex items-center gap-4 mb-3">
-                        <motion.div
-                          animate={{ 
-                            scale: isOpen ? 0.7 : 1,
-                          }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="flex-shrink-0"
-                        >
+                      <motion.div layout className="flex items-center gap-4 mb-3">
+                        <motion.div layout="position" className="flex-shrink-0">
                           <img 
                             src={companyLogos[exp.company]} 
                             alt={`${exp.company} logo`} 
-                            className={`object-contain transition-all duration-300 ${
-                              isOpen ? 'h-10' : 'h-14'
-                            }`}
+                            className={`object-contain transition-all duration-300 ${ isOpen ? 'h-10' : 'h-14' }`}
                           />
                         </motion.div>
-                        <motion.span 
-                          animate={{ 
-                            fontSize: isOpen ? '1.125rem' : '1.25rem',
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="font-bold text-slate-800"
-                        >
+                        <motion.span layout="position" className={`font-bold text-slate-800 transition-all duration-300 ${ isOpen ? 'text-lg' : 'text-xl' }`}>
                           {exp.company}
                         </motion.span>
-                      </div>
-                      <motion.h3 
-                        animate={{ 
-                          fontSize: isOpen ? '1.25rem' : '1.5rem',
-                        }}
-                        transition={{ duration: 0.3 }}
-                        className="font-bold text-slate-900 mb-2"
-                      >
+                      </motion.div>
+                      <motion.h3 layout="position" className={`font-bold text-slate-900 mb-2 transition-all duration-300 ${ isOpen ? 'text-xl' : 'text-2xl' }`}>
                         {exp.title}
                       </motion.h3>
                       <div className="flex items-center gap-2 text-slate-500 text-sm">
@@ -167,11 +144,11 @@ export default function Experience() {
                           <motion.div 
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 20 }}
+                            exit={{ opacity: 0, x: -20 }}
                             transition={{ duration: 0.3 }}
                             className="hidden sm:flex flex-wrap gap-2 justify-end max-w-xs"
                           >
-                            {exp.tech.slice(0, 3).map((tech) => (
+                            {exp.tech.slice(0, 2).map((tech) => (
                               <Badge key={tech} variant="secondary" className="bg-blue-100 text-blue-800">
                                 {tech}
                               </Badge>
@@ -193,47 +170,29 @@ export default function Experience() {
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-                      className="overflow-hidden"
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={{
+                        open: { opacity: 1, height: "auto" },
+                        collapsed: { opacity: 0, height: 0 }
+                      }}
+                      transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                      className="overflow-hidden border-t border-slate-200"
                     >
-                      <div className="px-6 pb-6 pt-2 border-t border-slate-200">
-                        <div className="space-y-3 my-4">
-                          {exp.achievements.map((achievement, achIndex) => (
-                            <motion.div 
-                              key={achIndex}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.3, delay: achIndex * 0.05 }}
-                              className="flex items-start gap-3"
-                            >
-                              <Award className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                              <p className="text-slate-700 leading-relaxed">{achievement}</p>
-                            </motion.div>
-                          ))}
+                        <div className="px-6 pb-6 pt-4">
+                            <div className="space-y-3 my-4">
+                                {exp.achievements.map((achievement) => (
+                                <div key={achievement} className="flex items-start gap-3">
+                                    <Award className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
+                                    <p className="text-slate-700 leading-relaxed">{achievement}</p>
+                                </div>
+                                ))}
+                            </div>
+                             <div className="flex flex-wrap gap-2 mt-4">
+                                {exp.tech.map(t => <Badge key={t} variant="secondary" className="bg-blue-100 text-blue-800 px-3 py-1">{t}</Badge>)}
+                            </div>
                         </div>
-                        <motion.div 
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: 0.2 }}
-                          className="flex flex-wrap gap-2 mt-4"
-                        >
-                          {exp.tech.map((tech, techIndex) => (
-                            <motion.div
-                              key={tech}
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.2, delay: techIndex * 0.05 }}
-                            >
-                              <Badge variant="secondary" className="bg-blue-100 text-blue-800 px-3 py-1">
-                                {tech}
-                              </Badge>
-                            </motion.div>
-                          ))}
-                        </motion.div>
-                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
