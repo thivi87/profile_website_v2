@@ -28,6 +28,27 @@
         .experience-item.active .experience-content {
             max-height: 1000px; /* Large enough to not clip content */
         }
+        #bio-content {
+            max-height: 0;
+        }
+        .transition-delay-100 {
+            transition-delay: 100ms !important;
+        }
+        .transition-delay-200 {
+            transition-delay: 200ms !important;
+        }
+        .transition-delay-300 {
+            transition-delay: 300ms !important;
+        }
+        .transition-delay-400 {
+            transition-delay: 400ms !important;
+        }
+        .transition-delay-500 {
+            transition-delay: 500ms !important;
+        }
+        .transition-delay-600 {
+            transition-delay: 600ms !important;
+        }
     </style>
 </head>
 
@@ -73,7 +94,7 @@
               </button>
             </div>
           </div>
-          <div class="relative flex justify-center lg:justify-end scroll-animate" style="transition-delay: 200ms;">
+          <div class="relative flex justify-center lg:justify-end scroll-animate transition-delay-200">
             <div class="relative w-80 h-80 md:w-96 md:h-96">
                 <div class="absolute inset-0 bg-blue-600/20 rounded-full blur-2xl"></div>
                 <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/4a22a0f08_profile.jpg" alt="Shaun Thivierge Headshot" class="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-slate-700">
@@ -96,10 +117,10 @@
           <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Comprehensive security leadership across cyber and physical domains, with proven expertise in enterprise-scale implementations.</p>
         </div>
         <div class="max-w-4xl mx-auto mb-16 bg-slate-50 rounded-2xl shadow-xl border border-slate-200 scroll-animate">
-            <div class="p-8">
+                <div id="bio-content" class="overflow-hidden transition-all duration-500 ease-in-out">
                 <h3 class="text-2xl font-bold text-slate-900 mb-4">Career Summary</h3>
                 <p class="text-slate-600 leading-relaxed">A decade-plus progression from front-line operations to senior leadership, managing global cyber and physical security programs.</p>
-                <div id="bio-content" class="overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
+                <div id="bio-content" class="overflow-hidden transition-all duration-500 ease-in-out">
                     <div class="pt-4">
                         <p class="text-slate-700 leading-relaxed mb-6">Over a career spanning more than a decade, Shaun has progressed from front-line security operations to senior leadership roles managing global cyber and physical security programs. Beginning as a Flex Officer in 2010, he advanced through GSOC operations, site supervision, and account management before stepping into corporate security advisory roles. His path includes leadership in emergency management during California wildfires, global security systems management, and the convergence of cyber–physical risk programs. Today, as Vulnerability Detection Manager at Oportun, Shaun drives remediation, compliance, and innovation across infrastructure, applications, and vendor ecosystems—while fostering cross-functional collaboration with Legal, HR, Safety, and Facilities.</p>
                         <div class="flex flex-wrap gap-2">
@@ -133,28 +154,28 @@
               <p class="text-slate-600 leading-relaxed">Comprehensive security assessments and vulnerability identification across enterprise environments.</p>
             </div>
           </div>
-          <div class="scroll-animate group" style="transition-delay: 100ms;">
+          <div class="scroll-animate group transition-delay-100">
             <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
               <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="alert-triangle" class="w-7 h-7 text-white"></i></div>
               <h3 class="text-xl font-bold text-slate-900 mb-4">Threat Assessment</h3>
               <p class="text-slate-600 leading-relaxed">Advanced threat modeling and risk analysis for complex organizational security landscapes.</p>
             </div>
           </div>
-          <div class="scroll-animate group" style="transition-delay: 200ms;">
+          <div class="scroll-animate group transition-delay-200">
             <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
               <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="shield" class="w-7 h-7 text-white"></i></div>
               <h3 class="text-xl font-bold text-slate-900 mb-4">Risk Mitigation</h3>
               <p class="text-slate-600 leading-relaxed">Strategic implementation of security controls and risk reduction frameworks.</p>
             </div>
           </div>
-          <div class="scroll-animate group" style="transition-delay: 300ms;">
+          <div class="scroll-animate group transition-delay-300">
             <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
               <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="zap" class="w-7 h-7 text-white"></i></div>
               <h3 class="text-xl font-bold text-slate-900 mb-4">Security Automation</h3>
-              <p class="text-slate-600 leading-relaxed">Development and deployment of automated security processes and incident response systems.</p>
+          <div class="scroll-animate group transition-delay-400">
             </div>
           </div>
-          <div class="scroll-animate group" style="transition-delay: 400ms;">
+          <div class="scroll-animate group transition-delay-400">
             <div class="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full">
               <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors"><i data-lucide="file-check" class="w-7 h-7 text-white"></i></div>
               <h3 class="text-xl font-bold text-slate-900 mb-4">Regulatory Compliance</h3>
@@ -434,7 +455,7 @@
     <section class="py-24 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16 scroll-animate">
-          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Certifications & Credentials</h2>
+          <a href__="https://www.credly.com/badges/61e332cd-e32b-4147-a8c6-0027837245e1" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-100">
           <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Industry-recognized certifications demonstrating expertise across cybersecurity, physical security, and specialized domains.</p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -443,10 +464,10 @@
               <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
               <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/d63f71b44_cpp.png" alt="CPP logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
               <h3 class="text-md font-bold text-slate-900 leading-tight flex-grow">Certified Protection Professional (CPP)</h3>
-              <p class="text-blue-600 font-semibold text-sm mt-1">ASIS International</p>
+          <a href__="https://www.credly.com/badges/61e332cd-e32b-4147-a8c6-0027837245e1" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-100">
             </div>
           </a>
-          <a href__="https://www.credly.com/badges/61e332cd-e32b-4147-a8c6-0027837245e1" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 100ms;">
+          <a href__="https://www.credly.com/badges/61e332cd-e32b-4147-a8c6-0027837245e1" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-100">
             <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
               <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
               <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/ade4afc7d_psp.png" alt="PSP logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
@@ -454,7 +475,7 @@
               <p class="text-blue-600 font-semibold text-sm mt-1">ASIS International</p>
             </div>
           </a>
-          <a href__="https://www.credly.com/badges/ed4b3029-cd9b-4328-80b1-66d7230dc69b" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 200ms;">
+          <a href__="https://www.credly.com/badges/ed4b3029-cd9b-4328-80b1-66d7230dc69b" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-200">
             <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
               <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
               <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/ed34c6465_pci.png" alt="PCI logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
@@ -462,7 +483,7 @@
               <p class="text-blue-600 font-semibold text-sm mt-1">ASIS International</p>
             </div>
           </a>
-          <a href__="https://www.credly.com/badges/ba619732-33f8-45df-a0ed-84d5d3c04607" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 300ms;">
+          <a href__="https://www.credly.com/badges/ba619732-33f8-45df-a0ed-84d5d3c04607" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-300">
             <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
               <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
               <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/7c19526f6_securityplus.png" alt="Security+ logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
@@ -470,7 +491,7 @@
               <p class="text-blue-600 font-semibold text-sm mt-1">CompTIA</p>
             </div>
           </a>
-          <a href__="https://business.clicksafety.com/impe/ucp/certificate/certificate.asp?courseid=MOOD39&userid=sthivierge" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 400ms;">
+          <a href__="https://business.clicksafety.com/impe/ucp/certificate/certificate.asp?courseid=MOOD39&userid=sthivierge" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-400">
             <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
               <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
               <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/f867f74f5_osha30.png" alt="OSHA 30 logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
@@ -478,7 +499,7 @@
               <p class="text-blue-600 font-semibold text-sm mt-1">ClickSafety</p>
             </div>
           </a>
-          <a href__="https://amsrvs.registry.faa.gov/airmeninquiry/Main.aspx" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 500ms;">
+          <a href__="https://amsrvs.registry.faa.gov/airmeninquiry/Main.aspx" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-500">
             <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
               <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
               <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/94ee40ea6_faa.png" alt="FAA logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
@@ -486,7 +507,7 @@
               <p class="text-blue-600 font-semibold text-sm mt-1">Federal Aviation Administration</p>
             </div>
           </a>
-          <a href__="https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=3207238" target="_blank" class="scroll-animate group cursor-pointer block" style="transition-delay: 600ms;">
+          <a href__="https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=3207238" target="_blank" class="scroll-animate group cursor-pointer block transition-delay-600">
             <div class="relative bg-slate-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
               <div class="absolute top-3 right-3 p-1.5 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"><i data-lucide="external-link" class="w-4 h-4 text-slate-700"></i></div>
               <div class="h-24 w-full flex items-center justify-center mb-4"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/d2925db3a_fcc.png" alt="FCC logo" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"></div>
@@ -511,12 +532,12 @@
             <h4 class="text-lg font-semibold text-slate-800 flex-grow">Bachelor of Science, Political Science & Global Studies</h4>
             <p class="text-blue-600 font-medium mt-2">Arizona State University</p>
           </div>
-          <div class="scroll-animate bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col items-center text-center" style="transition-delay: 100ms;">
+          <div class="scroll-animate bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col items-center text-center transition-delay-100">
             <div class="h-20 w-full flex items-center justify-center mb-6"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/986dbcd18_ucberkeley.png" alt="UC Berkeley logo" class="max-h-full max-w-full object-contain"></div>
             <h4 class="text-lg font-semibold text-slate-800 flex-grow">Cybersecurity Bootcamp</h4>
             <p class="text-blue-600 font-medium mt-2">University of California, Berkeley</p>
           </div>
-          <div class="scroll-animate bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col items-center text-center" style="transition-delay: 200ms;">
+          <div class="scroll-animate bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col items-center text-center transition-delay-200">
             <div class="h-20 w-full flex items-center justify-center mb-6"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68b7388775b8970c2dce000f/27eca2483_uci.png" alt="UC Irvine logo" class="max-h-full max-w-full object-contain"></div>
             <h4 class="text-lg font-semibold text-slate-800 flex-grow">Customer Experience Certificate</h4>
             <p class="text-blue-600 font-medium mt-2">University of California, Irvine</p>
@@ -553,7 +574,7 @@
               </div>
             </div>
           </div>
-          <div class="scroll-animate group" style="transition-delay: 200ms;">
+          <div class="scroll-animate group transition-delay-200">
             <div class="bg-slate-50 rounded-2xl p-8 hover:bg-white hover:shadow-2xl transition-all duration-300 border border-slate-100">
               <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 <div class="flex-1">
@@ -594,7 +615,7 @@
                 <a href__="mailto:sthivierge@gmail.com" class="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-base font-semibold"><i data-lucide="external-link" class="w-4 h-4 mr-2"></i>Send Email</a>
               </div>
             </div>
-            <div class="scroll-animate" style="transition-delay: 100ms;">
+            <div class="scroll-animate transition-delay-100">
               <div class="bg-slate-800 rounded-2xl p-8 h-full flex flex-col hover:bg-slate-700 transition-colors duration-300 border border-slate-700">
                 <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="linkedin" class="w-7 h-7 text-white"></i></div>
                 <h3 class="text-2xl font-bold text-white mb-4">LinkedIn</h3>
@@ -603,7 +624,7 @@
               </div>
             </div>
           </div>
-          <div class="text-center scroll-animate" style="transition-delay: 200ms;">
+          <div class="text-center scroll-animate transition-delay-200">
             <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700">
               <h3 class="text-2xl font-bold text-white mb-4">Resume Download</h3>
               <p class="text-slate-300 mb-6 leading-relaxed">Download a comprehensive overview of my experience and qualifications.</p>
